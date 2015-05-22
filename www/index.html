@@ -105,7 +105,8 @@
           <label for="name" class="ui-hidden-accessible">Name:</label>
           <input type="text" name="profile_name" id="profile_name" placeholder="Name">
           <label for="profile_gender">Profile Picture</label>
-          <input type="button" name="profile_picture" id="profile_picture" value="Get Picture" onclick="navigator.camera.getPicture( cameraSuccess, cameraError, [ cameraOptions ] );">
+          <img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
+          <button onclick="capturePhoto();">Capture Photo</button>
           <label for="profile_gender">Gender</label>
           <select name="profile_gender" id="profile_gender">
           		<option value="male">Male</option>
