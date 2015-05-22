@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.css" />        
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.external-png-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.icons-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.inline-png-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.inline-svg-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.structure-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="jquery.mobile.theme-1.4.5.min.css" />
+        <link rel="stylesheet" type="text/css" href="jw-jqm-cal.css" />
+	<link rel="stylesheet" type="text/css" href="css/jqm-datebox.min.css" />
+        <link rel="stylesheet" type="text/css" href="Livet.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/livet.css" />
+	
+        
+	
+        
+        
+        <title>Livet Wellness</title>
+    </head>
+    <body>
+    	
+<div data-role="page" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;">
+	
+  <div data-role="header" data-position="fixed" data-fullscreen="true">
+  		<img src="icon2.png" style="width: 55px; float:left;display:inline"><p>&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+  </div>
+
+  <div data-role="footer" data-position="fixed">
+    
+   </div>
+  
+
+</div>
+
+<div data-role="page"  id="profile" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;" >
+  <div data-role="panel" id="myPanel"> 
+    <form>
+		<div>
+          <h3>Editing Profile</h3>
+          <label for="name" class="ui-hidden-accessible">Name:</label>
+          <input type="text" name="profile_name" id="profile_name" placeholder="Name">
+          <label for="gender">Gender</label>
+        	<select name="profile_gender" id="gender">
+          		<option value="male">Male</option>
+          		<option value="female">Female</option>
+          </select>
+          <label for="profile_age">Age:</label>
+      	  <input type="range" name="profile_age" id="profile_age" value="50" min="0" max="100">
+      	  <label for="weight">Weight (Pounds):</label>
+      	  <input type="range" name="profile_weight" id="profile_weight" value="160" min="0" max="300">
+	  <label for=profile_breakfast">Breakfast Time:</label>
+	  <input type="text" name="profile_breakfast" id="profile_breakfast" data-role="datebox" data-options='{"mode":"timebox"}'>
+	  <label for=profile_lunch">Lunch Time:</label>
+	  <input type="text" name="profile_lunch" id="profile_lunch" data-role="datebox" data-options='{"mode":"timebox"}'>
+	  <label for=profile_dinner">Dinner Time:</label>
+	  <input type="text" name="profile_dinner" id="profile_dinner" data-role="datebox" data-options='{"mode":"timebox"}'>
+      	  <label for="profile_sugar">Blood Sugar:</label>
+      	  <input type="range" name="profile_sugar" id="profile_sugar" value="140" min="0" max="300">
+      	  <label for="profile_sugar_fasting">Blood Sugar (Fasting):</label>
+      	  <input type="range" name="profile_sugar_fasting" id="profile_sugar_fasting" value="80" min="0" max="300">
+      	  <label for="profile_systolic">Systolic:</label>
+      	  <input type="range" name="profile_systolic" id="profile_systolic" value="120" min="0" max="300">
+      	  <label for="profile_diastolic">Diastolic:</label>
+      	  <input type="range" name="profile_diastolic" id="profile_diastolic" value="80" min="0" max="300">   	  
+          <a id="profile_save" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" data-rel="close">Save</a>
+        </div>
+      </form>
+  </div> 
+
+ <div data-role="header" data-position="fixed" data-fullscreen="true" class="text-center" >
+  		<img src="icon2.png" style="width: 55px; float:left; display:inline;"><p style="float: left;">&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+
+  <div data-role="main" class="ui-content text-center">
+  	
+  	<div style="background-color:rgba(255,255,255,0.75); width: 80%; margin-left: 10%; margin-top: 15%; border-radius: 10px; text-align: center;">
+  		<br>
+  		<table class="text-left ui-responsive" style="margin: auto;" >
+  			<tr><td><strong>Name:</strong></td><td><p id="profilename"> </p></td></tr>
+  			<tr><td><strong>Age:</strong></td><td><p id="profileage"> </p></td></tr>
+			<tr><td><strong>Breakfast:</strong></td><td><p id="profilebreakfast"> </p></td></tr>
+			<tr><td><strong>Lunch:</strong></td><td><p id="profilelunch"> </p></td></tr>
+			<tr><td><strong>Dinner:</strong></td><td><p id="profiledinner"> </p></td></tr>  		
+  		</table>
+    	<a href="#myPanel" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" id="profile_edit">Edit</a>
+    	
+  	</div>
+  	
+  	
+  	
+  </div>
+
+  <div data-role="footer" data-position="fixed"></div>
+   
+</div>
+
+<div data-role="page"  id="calendaring" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;" >
+
+  <div data-role="header" data-position="fixed" data-fullscreen="true" class="text-center" >
+  		<img src="icon2.png" style="width: 55px; float:left; display:inline;"><p style="float: left;">&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+  
+  <div data-role="main" class="ui-content text-center main_content">
+  	
+  	<div data-role="content" >
+                <div id="calendar"></div>
+    </div>
+    
+    
+  	
+  </div>
+
+
+  <div data-role="footer" data-position="fixed"></div>
+	
+</div>
+
+<div data-role="page"  id="reading" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;" >
+
+  <div data-role="header" data-position="fixed" data-fullscreen="true" class="text-center" >
+  		<img src="icon2.png" style="width: 55px; float:left; display:inline;"><p style="float: left;">&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+
+  <div data-role="main" class="ui-content text-center">
+  	
+  	<div style="background-color:rgba(255,255,255,0.75); width: 80%; margin-left: 10%; margin-top: 15%; border-radius: 10px; text-align: center; padding-bottom: 2%;">
+  		<br>
+  		<form>
+  			
+		<div style="max-width: 400px; margin: auto; background: #eee; padding: 30px;">
+          <h3>Add Reading</h3>
+	  <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+          <label for="reading_type">Type</label>
+          <select name="reading_type" id="reading_type">
+          		<option value="Weight">Weight</option>
+          		<option value="Blood Sugar">Blood Sugar</option>
+          </select>
+          <label for="reading_value">Value</label>
+          <input type="range" name="reading_value" id="reading_value" value="150" min="0" max="300">
+          <a id="reading_save" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" href="#calendaring">Save</a>         
+        </div>
+        
+        </form>
+
+	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all" style="margin: 3%; text-transform: none;" >
+			<div style="text-align: center; width: 100%;"><strong>Dr Livet Tips</strong></div>
+			<img src="img/livet1.jpg" style="width: 10%; float: left; margin-right: 15%;" >
+			<p style="width: 75%; float: left; color: green;" >“The body needs specific vitamins and minerals to be at optimal performance, and a Livet lifestyle introduces these through nutrition, herbal supplements, therapeutic treatments and lifestyle changes. A Livet is a holistic lifestyle centred on the natural balance of mental, physical, spiritual and emotional aspects.”
+			</p>
+	</div>
+
+    </div>        
+    	
+  	</div>
+  	
+  <div data-role="footer" data-position="fixed"></div>
+  
+</div> 
+
+
+
+<div data-role="page"  id="journal" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;" >
+
+  <div data-role="header" data-position="fixed" data-fullscreen="true" class="text-center" >
+  		<img src="icon2.png" style="width: 55px; float:left; display:inline;"><p style="float: left;">&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+
+  <div data-role="main" class="ui-content text-center">
+  	
+  	<div style="background-color:rgba(255,255,255,0.75); width: 80%; margin-left: 10%; margin-top: 15%; border-radius: 10px; text-align: center;">
+  		<br>
+  		<form>
+		<div style="max-width: 400px; margin: auto; background: #eee; padding: 30px;">
+          <h3>Add Journal</h3>
+          
+          <div class="ui-field-contain">
+		    <label for="select-custom-18">Mood</label>
+		    <select name="journal_mood" id="journal_mood" data-native-menu="false">
+		        <option value="Happy" data-image="img/emoticons/PNG/icontexto-emoticons-03-032x032.png">Happy</option>
+		        <option value="Sick" data-image="img/emoticons/PNG/icontexto-emoticons-11-032x032.png">Sick</option>
+		        <option value="Sad" data-image="img/emoticons/PNG/icontexto-emoticons-13-032x032.png">Sad</option>
+		     </select>
+		  </div>
+		  
+		  <div class="ui-field-contain">
+		    <label for="select-custom-18">Note</label>
+		    <textarea cols="40" rows="8" name="journal_note" id="journal_note" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" data-clear-btn="true"></textarea>
+		  </div>
+          
+          <a id="journal_save" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" href="#calendaring">Save</a>
+          
+          
+          
+        </div>
+        
+        </form>
+    </div>
+       
+        
+    	
+  	</div>
+  	
+  <div data-role="footer" data-position="fixed"></div>
+  
+</div>
+
+<div data-role="page"  id="charts" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;" >
+
+   <div data-role="header" data-position="fixed" data-fullscreen="true" class="text-center" >
+  		<img src="icon2.png" style="width: 55px; float:left; display:inline;"><p style="float: left;">&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+
+    <!--Div that will hold the pie chart-->
+    <div style="background-color:rgba(255,255,255,0.75); width: 100%; margin-top: 15%; text-align: center;">
+    	<div id="chart_div"></div>
+    </div>
+
+   <div data-role="main" class="ui-content text-center">
+    	<div data-role="footer" data-position="fixed"></div>
+   </div>
+
+
+</div> 
+
+
+
+ 
+        
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/backbone.js"></script>
+        <script src="jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+        <script type="text/javascript" src="jw-jqm-cal.js"></script>
+	<script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="js/jqm-datebox.mode.datebox.min.js"></script>
+	<script type="text/javascript" src="js/decode.js"></script>
+        <script type="text/javascript">
+        	
+        	
+        	$( document ).bind( "mobileinit", function() {
+			    // Make your jQuery Mobile framework configuration changes here!
+				$.support.cors = true;
+			    $.mobile.allowCrossDomainPages = true;
+			});
+			
+			$('[data-role=footer]').each( function() {
+            	$(this).load("footer.html", function(data, status, xhr){
+            		//alert(status);
+            		$(this).children("[data-role=navbar]").first().navbar();
+            	});
+        	});
+
+
+		// Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        // Empty
+    }
+
+    // alert dialog dismissed
+        function alertDismissed() {
+            // do something
+        }
+
+    // Show a custom alertDismissed
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'Time for lunch!',  // message
+            alertDismissed,         // callback
+            'Whats for Lunch ?',            // title
+            'Done'                  // buttonName
+        );
+    }
+        	
+        </script>
+        <script type="text/javascript" src="js/livet.js"></script>
+
+
+        
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Mood');
+        data.addColumn('number', 'Journal');
+        data.addRows([
+          ['Happy', 10],
+          ['Depressed', 3],
+          ['Sick', 4],
+          ['Tired', 6],
+          ['Relaxed', 7]
+        ]);
+
+        // Set chart options
+        var options = {'title':'My mood for the last 30 days',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+        
+    </body>
+</html>

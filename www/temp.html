@@ -1,0 +1,48 @@
+<div data-role="page"  id="profile" style="background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% auto;" >
+  <div data-role="header" data-position="fixed" data-fullscreen="true">
+  		<img src="icon2.png" style="width: 55px; float:left;display:inline"><p>&nbsp;&nbsp;Livet Wellness<p>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+  	
+  	
+    
+
+	<div data-role="panel" id="myPanel">
+	 <form>
+		<div>
+          <h3>Editing Profile</h3>
+          <label for="name" class="ui-hidden-accessible">Name:</label>
+          <input type="text" name="profile_name" id="usrnm" placeholder="Name">
+          <label for="gender">Gender</label>
+        	<select name="profile_gender" id="gender">
+          		<option value="male">Male</option>
+          		<option value="female">Female</option>
+          </select>
+          <label for="profile_age">Age:</label>
+      	  <input type="profile_range" name="age" id="age" value="50" min="0" max="100">
+      	  <label for="weight">Weight (Pounds):</label>
+      	  <input type="range" name="profile_weight" id="weight" value="160" min="0" max="300">
+          <button id="profile_save">Save</button>
+        </div>
+      </form> 
+    	
+    </div>
+
+
+   	<div style="background: #fff">
+   		<br><br><br>
+   		A set of blah blah blah
+   		<br><br><br>
+   		<a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Edit</a>
+   		
+   	</div>
+ 
+ </div>
+   
+   
+    
+
+  <div data-role="footer" data-position="fixed"></div>
+  
+</div>

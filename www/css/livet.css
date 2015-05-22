@@ -1,0 +1,18 @@
+
+.ui-page-theme-a .ui-panel-wrapper {
+	background: url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% auto;
+}
+
+.text-center {
+  text-align:center;
+}
+
+.text-left {
+	text-align: left;
+	padding-left: 25px;
+}
+
+#calendaring .main_content {
+	padding-top: 20%;
+}
+

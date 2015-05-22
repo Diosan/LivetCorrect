@@ -1,0 +1,10 @@
+
+<div data-role="navbar">
+      <ul>
+      	<li><a href="#profile" data-icon="user">Profile</a></li>
+        <li><a href="#calendaring" data-icon="calendar">Calendar</a></li>
+        <li><a data-icon="plus" href="#reading">Reading</a></li>
+        <li><a data-icon="plus" href="#journal">Journal</a></li>
+	<li><a data-icon="plus" href="#charts">Charts</a></li>
+      </ul>
+</div>
