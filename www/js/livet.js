@@ -31,15 +31,19 @@ function onPhotoDataSuccess(imageData) {
       // Get image handle
       //
       var smallImage = document.getElementById('smallImage');
+      var profileImage = document.getElementById('profileimage');
 
       // Unhide image elements
       //
       smallImage.style.display = 'block';
+      profileImage.style.display = 'block';
 
       // Show the captured photo
       // The in-line CSS rules are used to resize the image
       //
       smallImage.src = "data:image/jpeg;base64," + imageData;
+      profileImage.src = "data:image/jpeg;base64," + imageData;
+      
 }
 
 
