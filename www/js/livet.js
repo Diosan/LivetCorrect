@@ -14,6 +14,13 @@ var destinationType; // sets the format of returned value
 //
 document.addEventListener("deviceready",onDeviceReady,false);
 
+ // device APIs are available
+    //
+    function onDeviceReady() {
+        pictureSource=navigator.camera.PictureSourceType;
+        destinationType=navigator.camera.DestinationType;
+    }
+
 
 // Called when a photo is successfully retrieved
 //
@@ -45,8 +52,7 @@ function onPhotoDataSuccess(imageData) {
 function capturePhoto() {
    alert('Capturing Photos');
    // Take picture using device camera and retrieve image as base64-encoded string
-   //navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-   //destinationType: destinationType.DATA_URL });
+   navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL });
 }
 
 
