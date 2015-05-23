@@ -14,7 +14,7 @@ var destinationType; // sets the format of returned value
 //
 document.addEventListener("deviceready",onDeviceReady,false);
 
- // device APIs are available
+ 	// device APIs are available
     //
     function onDeviceReady() {
         pictureSource=navigator.camera.PictureSourceType;
@@ -36,13 +36,14 @@ function onPhotoDataSuccess(imageData) {
       // Unhide image elements
       //
       smallImage.style.display = 'block';
-      profileImage.style.display = 'block';
+      //profileImage.style.display = 'block';
 
       // Show the captured photo
       // The in-line CSS rules are used to resize the image
       //
       smallImage.src = "data:image/jpeg;base64," + imageData;
       profileImage.src = "data:image/jpeg;base64," + imageData;
+      profileImage2.src = "data:image/jpeg;base64," + imageData;
       
 }
 
@@ -497,6 +498,8 @@ $(function() {
   			$('#dtip').html( lines[(Math.random() * lines.length -2 | 0) + 1] );
   			$( "#tips" ).popup( "open" );
 		}, "text");
+		
+		$('#profilename2').html(localStorage.getItem(fieldName));
 	
 	}
 	

@@ -50,15 +50,31 @@
     	
 
     	
-<div data-role="page"  id="home" style="background: #ffffff url(images/meetime.jpeg) no-repeat fixed center; background-size: 100% 100%;">
+<div data-role="page"  id="home" style="background: #ffffff url(images/1554564_524919460940652_2126412582_n.jpg) no-repeat fixed center; background-size: 100% 100%;">
 	
   <div data-role="header" data-position="fixed" data-fullscreen="true">
   	<img src="icon2.png" style="width: 55px; float:left;display:inline"><p>&nbsp;&nbsp;MeeTime</p>
   </div>
   
   <div data-role="main" class="ui-content">
+  	
   	<div style="background-color:rgba(255,255,255,0.75); width: 80%; margin-left: 10%; margin-top: 15%; border-radius: 10px; text-align: center;">
-  	 
+  		<br>
+  		<div style="margin-left: auto, clear:both; text-align: center; ">
+  			
+  				<table class="text-left ui-responsive" style="width:40%; float:left; clear:none;" >
+  					<tr><td><p id="profilename2"></p></td></tr> 		
+  				</table>
+  				
+  				<img style="width:150px; height:200px; float:right; clear:none; margin-right:10%; " id="profileimage2" src="img/avatar.jpg">
+  			
+  		</div>
+  		<br>
+  		<div style="width:100%; clear:both;">
+    	</div>
+  	</div>
+
+	  	 
 	 <div data-role="popup" id="tour" data-overlay-theme="b" data-dismissible="false">
       <div data-role="header">
         <h1>Welcome to MeeTime!</h1>
@@ -86,8 +102,9 @@
         <a href="#myPanel" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b ui-icon-back ui-btn-icon-left" data-rel="back">Close Tip</a>
       </div>
      </div>
-      
-	</div>
+	
+	 	 
+	
   </div>
 
   <div data-role="footer" data-position="fixed">
@@ -144,19 +161,25 @@
   	
   	<div style="background-color:rgba(255,255,255,0.75); width: 80%; margin-left: 10%; margin-top: 15%; border-radius: 10px; text-align: center;">
   		<br>
-  		<table class="text-left ui-responsive" style="margin: auto;" >
-  			<tr><td><strong>Name:</strong></td><td><p id="profilename"> </p></td></tr>
-  			<tr><td><strong>Age:</strong></td><td><p id="profileage"> </p></td></tr>
-  			<tr><td><strong>Gender:</strong></td><td><p id="profilegender"> </p></td></tr>
-			<tr><td><strong>Breakfast:</strong></td><td><p id="profilebreakfast"> </p></td></tr>
-			<tr><td><strong>Lunch:</strong></td><td><p id="profilelunch"> </p></td></tr>
-			<tr><td><strong>Dinner:</strong></td><td><p id="profiledinner"> </p></td></tr>
-			<tr><td><strong>MeeTime:</strong></td><td><p id="profilemeetime"> </p></td></tr>
-			<tr><td><strong>MeeActivity:</strong></td><td><p id="profilemeeactivity"> </p></td></tr>  		
-  		</table>
-  		<img style="display:none;width:150px;height:200px;" id="profileimage" src="" />
-    	<a href="#myPanel" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" id="profile_edit">Edit</a>
-    	
+  		<div style="margin-left: auto, clear:both; text-align: center; ">
+  			
+  				<table class="text-left ui-responsive" style="width:40%; float:left; clear:none;" >
+  					<tr><td><strong>Name:</strong></td><td><p id="profilename"> </p></td></tr>
+  					<tr><td><strong>Age:</strong></td><td><p id="profileage"> </p></td></tr>
+  					<tr><td><strong>Gender:</strong></td><td><p id="profilegender"> </p></td></tr>
+					<tr><td><strong>Breakfast:</strong></td><td><p id="profilebreakfast"> </p></td></tr>
+					<tr><td><strong>Lunch:</strong></td><td><p id="profilelunch"> </p></td></tr>
+					<tr><td><strong>Dinner:</strong></td><td><p id="profiledinner"> </p></td></tr>
+					<tr><td><strong>MeeTime:</strong></td><td><p id="profilemeetime"> </p></td></tr>
+					<tr><td><strong>MeeActivity:</strong></td><td><p id="profilemeeactivity"> </p></td></tr>  		
+  				</table>
+  				<img style="width:150px; height:200px; float:right; clear:none; margin-right:10%; " id="profileimage" src="img/avatar.jpg">
+  			
+  		</div>
+  		<br>
+  		<div style="width:100%; clear:both;">
+    		<a href="#myPanel" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" id="profile_edit">Edit</a>
+    	</div>
   	</div>
   	
   	
