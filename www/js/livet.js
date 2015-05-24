@@ -521,12 +521,12 @@ $(function() {
     
     if (localStorage.getItem('name') === null) {
     
-    	//alert('Should show tour');
+    	alert('Should show tour');
     	$( "#tour" ).popup( "open" );    	
     	
 	} else {
 		
-		//alert('Should show tips');
+		alert('Should show tips');
 		
 		$.get( 'tips.csv', function( data ) {
     		var lines = data.split('\n');
