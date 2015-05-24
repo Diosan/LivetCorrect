@@ -32,6 +32,7 @@ function onPhotoDataSuccess(imageData) {
       //
       var smallImage = document.getElementById('smallImage');
       var profileImage = document.getElementById('profileimage');
+      var profileImage = document.getElementById('profileimage2');
 
       // Unhide image elements
       //
@@ -45,6 +46,8 @@ function onPhotoDataSuccess(imageData) {
       profileImage.src = "data:image/jpeg;base64," + imageData;
       profileImage2.src = "data:image/jpeg;base64," + imageData;
       
+	  $.mobile.changePage($("#profile), "none");
+
 }
 
 
@@ -55,7 +58,7 @@ function onPhotoDataSuccess(imageData) {
 //
 // A button will call this function
 function capturePhoto() {
-   alert('Capturing Photos');
+   //alert('Capturing Photos');
    // Take picture using device camera and retrieve image as base64-encoded string
    navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50, destinationType: destinationType.DATA_URL });
 }
@@ -140,8 +143,27 @@ if (localStorage.getItem("readings") == null) {
    
 }
 
-
-
+function cm2inches(cm) {
+	
+	var inches = 0;
+	var feetHeight = 0;
+	var inchesHeight = 0;
+	var height = '';
+	
+	//alert(cm);
+	
+	inches = parseFloat('0.393700787') * parseFloat(cm);
+	feetHeight = Math.floor(Math.round( inches )/12);
+	inchesHeight = Math.round( inches ) % 12;
+	height = feetHeight.toString() + ' feet ';
+	
+	if(inchesHeight != 0) {
+		height += inchesHeight + ' inches';
+	}	
+	
+	return height;
+	
+}
 
 
 // Create an array that will contain the events
@@ -174,9 +196,19 @@ $(function() {
 	});
 	
 	
+	//$( '#profile_height' ).change( function() {
+	//	alert('value changing');
+		//$('#profile_height_inches').html( cm2inches( $('this').val() ) );
+	//});
 	
-	
-	
+	$( '#profile_height' ).slider({
+    	create: function (event, ui) {
+        	$(this).bind( 'change', function () {
+        		//alert($( '#profile_height' ).val());
+				$('#profile_height_inches').html( cm2inches( $( '#profile_height' ).val() ) );
+        	});
+    	}
+	});
 	
     
 	$('#profile_save').click( function() {
@@ -499,7 +531,7 @@ $(function() {
   			$( "#tips" ).popup( "open" );
 		}, "text");
 		
-		$('#profilename2').html(localStorage.getItem(fieldName));
+		$('#profilename2').html('Hi ' + localStorage.getItem('name'));
 	
 	}
 	

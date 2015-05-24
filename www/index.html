@@ -131,13 +131,16 @@
           </select>
           <label for="profile_age">Age:</label>
       	  <input type="range" name="profile_age" id="profile_age" value="50" min="0" max="100">
+      	  <label for="profile_height">Height(cm):</label>
+      	  <input type="text" name="profile_height" id="profile_height" value="170" min="100" max="250" data-popup-enabled="true" >
+      	  <p id="profile_height_inches">5 feet 7 inches</p>
 	  	  <label for=profile_breakfast">Breakfast Time:</label>
 	  	  <input type="text" name="profile_breakfast" id="profile_breakfast" data-role="datebox" data-options='{"mode":"timebox"}'>
 	  	  <label for=profile_lunch">Lunch Time:</label>
 	  	  <input type="text" name="profile_lunch" id="profile_lunch" data-role="datebox" data-options='{"mode":"timebox"}'>
-	  	  <label for=profile_dinner">Dinner Time:</label>
-	  	  <input type="text" name="profile_dinner" id="profile_dinner" data-role="datebox" data-options='{"mode":"timebox"}'>      
-      	  <label for=profile_meetime">Mee Time:</label>
+	  	  <label for="profile_dinner">Dinner Time:</label>
+	  	  <input type="text" name="profile_dinner" id="profile_dinner" data-role="datebox" data-options='{"mode":"timebox"}'>
+      	  <label for="profile_meetime">Mee Time:</label>
 	  	  <input type="text" name="profile_meetime" id="profile_meetime" data-role="datebox" data-options='{"mode":"timebox"}'>
   		  <label for="profile_meeactivity">MeeTime Activity</label>
           <select name="profile_meeactivity" id="profile_meeactivity">
@@ -146,7 +149,8 @@
           		<option value="Singing Classes">Singing Classes</option>
           		<option value="Dancing">Dancing</option>
           		<option value="Learning Instrument">Learning An Instrument</option>
-          </select>    	     	  
+          </select>
+              	     	  
   
           <a id="profile_save" class="ui-btn ui-icon-edit ui-btn-icon-left ui-btn-inline ui-mini ui-corner-all" data-rel="close">Save</a>
         </div>
