@@ -46,7 +46,7 @@ function onPhotoDataSuccess(imageData) {
       profileImage.src = "data:image/jpeg;base64," + imageData;
       profileImage2.src = "data:image/jpeg;base64," + imageData;
       
-	  $.mobile.changePage($("#profile), "none");
+	  $.mobile.changePage('#profile', 'none');
 
 }
 
@@ -521,9 +521,12 @@ $(function() {
     
     if (localStorage.getItem('name') === null) {
     
-    	$( "#tour" ).popup( "open" );
+    	//alert('Should show tour');
+    	$( "#tour" ).popup( "open" );    	
     	
 	} else {
+		
+		//alert('Should show tips');
 		
 		$.get( 'tips.csv', function( data ) {
     		var lines = data.split('\n');
