@@ -37,7 +37,8 @@ function onPhotoDataSuccess(imageData) {
       // Unhide image elements
       //
       smallImage.style.display = 'block';
-      //profileImage.style.display = 'block';
+      profileImage.style.display = 'block';
+      profileImage2.style.display = 'block';
 
       // Show the captured photo
       // The in-line CSS rules are used to resize the image
