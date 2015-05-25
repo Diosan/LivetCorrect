@@ -172,6 +172,29 @@ var events = [];
 
 $(function() {
 	
+	//$( "#tour" ).popup( "open" );
+	if (localStorage.getItem('name') === null) {
+    
+    	//alert('Should show tour');
+    	//$( "#tour" ).popup();
+    	$( "#tour" ).popup( "open" );    	
+    	
+	} else {
+		
+		//alert('Should show tips');
+		
+		$.get( 'tips.csv', function( data ) {
+    		var lines = data.split('\n');
+  			$('#dtip').html( lines[(Math.random() * lines.length -2 | 0) + 1] );
+  			//$('#dtip').html( "Something" );
+  			//$( "#tips" ).popup();
+  			$( "#tips" ).popup( "open" );
+		}, "text");
+		
+		$('#profilename2').html('Hi ' + localStorage.getItem('name'));
+	
+	}
+	
 	setProfile();
 	setupCalendar();
 	
@@ -519,24 +542,7 @@ $(function() {
     
     
     
-    if (localStorage.getItem('name') === null) {
-    
-    	alert('Should show tour');
-    	$( "#tour" ).popup( "open" );    	
-    	
-	} else {
-		
-		alert('Should show tips');
-		
-		$.get( 'tips.csv', function( data ) {
-    		var lines = data.split('\n');
-  			$('#dtip').html( lines[(Math.random() * lines.length -2 | 0) + 1] );
-  			$( "#tips" ).popup( "open" );
-		}, "text");
-		
-		$('#profilename2').html('Hi ' + localStorage.getItem('name'));
-	
-	}
+ 
 	
 	
 
